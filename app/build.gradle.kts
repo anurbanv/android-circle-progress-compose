@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.circleprogressanimation"
+    namespace = "com.anurbanv.circleprogressanimation"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.circleprogressanimation"
+        applicationId = "com.anurbanv.circleprogressanimation"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

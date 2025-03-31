@@ -1,4 +1,4 @@
-package com.example.circleprogressanimation.components
+package com.anurbanv.circleprogressanimation.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column

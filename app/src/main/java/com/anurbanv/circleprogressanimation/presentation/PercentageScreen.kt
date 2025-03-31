@@ -1,4 +1,4 @@
-package com.example.circleprogressanimation.presentation
+package com.anurbanv.circleprogressanimation.presentation
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateFloatAsState
@@ -19,11 +19,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.circleprogressanimation.components.CircleRing
-import com.example.circleprogressanimation.components.ElectricityPercentage
-import com.example.circleprogressanimation.components.SegmentedGradientArc
-import com.example.circleprogressanimation.ui.theme.DeepBlue
-import com.example.circleprogressanimation.util.toPx
+import com.anurbanv.circleprogressanimation.components.CircleRing
+import com.anurbanv.circleprogressanimation.components.ElectricityPercentage
+import com.anurbanv.circleprogressanimation.components.SegmentedGradientArc
+import com.anurbanv.circleprogressanimation.theme.DeepBlue
+import com.anurbanv.circleprogressanimation.util.toPx
 
 private const val animationDurationMillis = 2000
 

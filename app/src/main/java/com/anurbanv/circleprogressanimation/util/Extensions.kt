@@ -1,4 +1,4 @@
-package com.example.circleprogressanimation.util
+package com.anurbanv.circleprogressanimation.util
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalDensity

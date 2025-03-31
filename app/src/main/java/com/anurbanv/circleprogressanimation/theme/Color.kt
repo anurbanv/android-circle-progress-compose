@@ -1,4 +1,4 @@
-package com.example.circleprogressanimation.ui.theme
+package com.anurbanv.circleprogressanimation.theme
 
 import androidx.compose.ui.graphics.Color
 

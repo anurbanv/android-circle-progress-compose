@@ -1,4 +1,4 @@
-package com.example.circleprogressanimation.presentation
+package com.anurbanv.circleprogressanimation.presentation
 
 import androidx.compose.runtime.FloatState
 import androidx.compose.runtime.mutableFloatStateOf

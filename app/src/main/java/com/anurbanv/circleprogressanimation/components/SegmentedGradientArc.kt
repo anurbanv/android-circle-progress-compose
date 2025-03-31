@@ -1,4 +1,4 @@
-package com.example.circleprogressanimation.components
+package com.anurbanv.circleprogressanimation.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.circleprogressanimation.ui.theme.colorSectionsList
+import com.anurbanv.circleprogressanimation.theme.colorSectionsList
 import kotlin.math.cos
 import kotlin.math.sin
 
