@@ -15,5 +15,6 @@ val BrightBlue = Color(0xFF4057E3)
 val Lilac = Color(0xFF928DF2)
 val Red = Color(0xFFEF404A)
 val RosePink = Color(0xFFFF8D8D)
+val DeepBlue = Color(0xFF172E62)
 
 val colorSectionsList = listOf(BrightBlue, Lilac, Red, Red, Red, Red, RosePink, RosePink, RosePink)
