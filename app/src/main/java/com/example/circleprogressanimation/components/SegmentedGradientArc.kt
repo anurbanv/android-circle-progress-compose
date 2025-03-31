@@ -11,15 +11,21 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.circleprogressanimation.ui.theme.colorSectionsList
 import kotlin.math.cos
 import kotlin.math.sin
 
 @Composable
 fun SegmentedGradientArc(
+    sweepAngle: Float,
     radius: Float = 100f,
     thickness: Float = 20f,
-    colors: List<Color> = listOf(Color.Red, Color.Green, Color.Blue),
 ) {
+    val colors = colorsForGradient(sweepAngle)
+
+    val lastSegmentAngle = sweepAngle % 90
+    val lastSegmentIndex = colors.size - 2
+
     Canvas(modifier = Modifier.size((radius * 2 + thickness).dp)) {
         val step = 1f
         val segmentAngle = 90f
@@ -35,6 +41,12 @@ fun SegmentedGradientArc(
             for (i in 0 until totalSteps) {
                 val angle = startAngle + (i * step)
                 val nextAngle = angle + step
+
+                if (lastSegmentAngle != 0f) {
+                    if (segment == lastSegmentIndex) {
+                        if (i > lastSegmentAngle) return@Canvas
+                    }
+                }
 
                 val fraction = i.toFloat() / totalSteps
                 val blendedColor = lerp(startColor, endColor, fraction)
@@ -56,8 +68,23 @@ fun SegmentedGradientArc(
     }
 }
 
+private fun colorsForGradient(animatedSweep: Float): List<Color> {
+    return when {
+        animatedSweep == 0f -> listOf()
+        animatedSweep <= 90 -> colorSectionsList.subList(0, 2)
+        animatedSweep <= 180 -> colorSectionsList.subList(0, 3)
+        animatedSweep <= 270 -> colorSectionsList.subList(0, 4)
+        animatedSweep <= 360 -> colorSectionsList.subList(0, 5)
+        animatedSweep <= 450 -> colorSectionsList.subList(0, 6)
+        animatedSweep <= 540 -> colorSectionsList.subList(0, 7)
+        animatedSweep <= 630 -> colorSectionsList.subList(0, 8)
+        animatedSweep <= 720 -> colorSectionsList
+        else -> listOf()
+    }
+}
+
 @Preview
 @Composable
 private fun SegmentedGradientArcPreView() {
-    Box { SegmentedGradientArc() }
+    Box { SegmentedGradientArc(sweepAngle = 300f) }
 }
